@@ -303,7 +303,7 @@ button:hover {
 .social-icon {
     display: flex;
     justify-content: center;
-    
+    margin: 15px;
 }
 .linkedin, .github {
     width: 40px;
