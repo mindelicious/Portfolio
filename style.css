@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body {
+    margin: 0;
+    padding: 0;
+    background: #f6f5f5;
+}
+
+/* NAVIGATION */
+header {
+    width: 100%;
+}
+nav {
+    width: 80%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 3%;
+}
+.logo{
+    display:flex;
+    align-self: center;
+    font: 20px bold, "Montserrat", sans-serif;
+    color: #333333;
+    letter-spacing: 0.15em;
+}
+ul {
+    width: 100%;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-around;
+    font: 14px "Montserrat", sans-serif;
+    text-transform: uppercase;
+}
+li {
+    list-style-type: none;
+    display: flex;
+    
+}
+ul li a {
+    align-self: center;
+    list-style-type: none;
+    color: #666666;
+    position: absolute;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 20px;
+    letter-spacing: 2px;
+}
+a:hover {
+    color: #333333;
+}
+/* NAV ON SCROLL */
+.white {
+    background: white;
+    height: 50px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.28);
+    transition: .5s;
+}
+/* JUMBOTRONE */
+.jumbotrone {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 3%;
+}
+.wlc-img {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.welcome-img {
+    width: 20%;
+    position: fixed;
+    bottom: 0;
+    right: 80px;
+    z-index: 1;
+}
+.welcome-text {
+    display: flex;
+    flex-direction: column;
+}
+.welcome-text h6 {
+    font: 18px "Montserrat", sans-serif;
+    color: #333333;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    margin: 0;
+    margin-left: 6px
+}
+.welcome-text h1 {
+    font: 72px "Montserrat", sans-serif;
+    color: #333333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin: 0;
+}
+.welcome-text p {
+    font: 12px "Open Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 0;
+    margin-left: 7px;
+}
+
+/* ABOUT ME SECTION */
+#section-about {
+    height: 610px;
+    padding-left: 3%;
+    display: flex;
+    background: #ffffff;
+    flex-direction: column;
+}
+#section-about span {
+    padding: 10px;
+}
+.about-me {
+    width: 60%;
+    padding-top: 5%;
+    
+}
+.about-me h1 {
+    font: 24px "Montserrat", sans-serif;
+    font-weight: 700;
+    color: #333333;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.about-me p {
+    font: 14px "Open Sans", sans-serif;
+    color:#666666;
+    padding-top: 28px;
+}
+.skill-list {
+    display: flex;
+    padding-top: 20px;
+    flex-direction: row;
+    align-items: baseline;
+    margin: 0 auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.skill-list i {
+    display: flex;
+    font-size: 60px;
+    text-shadow: 3px 4px 5px rgba(146, 150, 150, 1);
+}
+.skill-list span {
+    transition: all 2.0s ease;
+}
+/* ABOUT ME ANIMATED */
+.skill-animation span { transform: translateX(-1000px) translateY(0); }
+
+/* PORTFOLIO SECTION */
+#section-portfolio {
+    width: 70%;
+    padding: 5% 0;
+    padding-left: 3%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#section-portfolio h2 {
+   font: 27px "Montserrat", sans-serif;
+   text-transform: uppercase;
+   color: #333333;
+   font-weight: 700;
+   letter-spacing: 1px;
+   width: 100%;
+   text-align: center;
+}
+.portfolio-image {
+    position: relative;
+}
+.portfolio-image img {
+    width: 350px;
+    height: 220px;
+    padding: 10px;
+}
+
+.layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   justify-content: center;
+    transition: .5s ease;
+    opacity: 0;
+}
+.layer h3 {
+    font: 16px "Montserrat", sans-serif;
+    font-weight: 600;
+    color: #333333;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+.layer p {
+    font: 14px "Open Sans", sans-serif;
+    color: #666666;    
+}
+.layer a {
+    text-decoration: none;
+}
+.portfolio-image:hover .layer {
+    opacity: 1;
+    background: rgba(250, 250, 250, 0.8);
+}
+.layer .fa-link {
+    font-size: 25px;
+    color: #666666;
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ .fa-link:hover {
+    font-size: 25px;
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    background: #666666;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+ }
+ /* SECTION CONTACT*/
+ #contact-section {
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+ }
+ #contact-section h2 {
+    font: 18px "Montserrat", sans-serif;
+    font-weight: 700;
+    color: #333333;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+ }
+ .contact-form {
+    width: 60%;
+    padding: 15px 40px;
+    margin: 5%;
+    box-shadow: 0px 0px 20px -2px rgba(0,0,0,0.75);
+    background: #f6f5f5;
+    transition: all 2.0s ease;
+ }
+ .name-section {
+    display: flex;
+    justify-content: space-between;
+}
+ .contact-form input,
+ textarea {
+     padding: 6px 12px;
+     margin: 10px 0;
+     border: 1px solid #e1e1e1;
+ }
+ .msg-section {
+    display: flex;
+    flex-direction: column;
+ }
+input#name,
+input#email {
+    width: 50%;
+}
+input#name {
+    margin-right: 5px;
+}
+button {
+    display: flex;
+    background: #333333 none repeat scroll 0 0;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 3px 6px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+button:hover {
+    background: #fff;
+    color: #333333;
+    border: 1px solid #333333;
+}
+.contact-animation { transform: translateX(2000px) translateY(0); }
+/* FOOTER */
+.social-icon {
+    display: flex;
+    justify-content: center;
+    
+}
+.linkedin, .github {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50px;
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    margin: 5px;
+}
+.linkedin:hover {
+    background: black;
+    color: white;
+    transition: all 0.4s ease 0s;
+}
+.github:hover {
+    background: black;
+    color: white;
+    transition: all 0.4s ease 0s;
+}
