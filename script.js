@@ -1,10 +1,13 @@
+//NAV
 $(document).on('scroll', function() {
-    if($(window).scrollTop()){
-        $('header').addClass('white');
+    if($(window).scrollTop()) {
+        $('header').addClass('goDown');
     } else {
-        $('header').removeClass('white');
+        $('header').removeClass('goDown');
     }
 })
+
+//CONTACT AND SKILL ANIMATION 
 function isScrolledIntoView(elem){
     var docViewTop = $(window).scrollTop();
     var docViewBottom = docViewTop + $(window).height();
@@ -44,9 +47,11 @@ $(document).on('scroll', function(){
        }
    });
 });
-// Sending mail
+//SENDING MAIL
 var $contactForm = $('.contact-form');
 var $submitBtn = $('#submit');
+var name = $('#name');
+var email = $('#email');
 $contactForm.submit(function(e) {
     e.preventDefault();
     $.ajax({
@@ -68,3 +73,46 @@ $contactForm.submit(function(e) {
         },
 })
 })
+
+/* HAMBURGER */
+var wrapperMenu = document.querySelector('.wrapper-menu');
+var listItem = document.querySelector('#active');
+
+wrapperMenu.addEventListener('click', function(){
+  if(wrapperMenu.classList.toggle('open')) {
+      $(listItem).toggleClass('awesome');
+    } else {
+        $(listItem).toggleClass('awesome');
+    }
+})
+listItem.addEventListener('click', function() {
+     $(wrapperMenu).toggleClass('open');
+     $(listItem).toggleClass('awesome');     
+})
+
+//SMOOTH SCROLLING
+// Select all links with hashes
+$('a[href*="#"]')
+// Remove links that don't actually link to anything
+.not('[href="#"]')
+.not('[href="#0"]')
+.click(function(event) {
+  // On-page links
+  if (
+    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+    && 
+    location.hostname == this.hostname
+  ) {
+    // Figure out element to scroll to
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    // Does a scroll target exist?
+    if (target.length) {
+      // Only prevent default if animation is actually gonna happen
+      event.preventDefault();
+      $('html, body').animate({
+        scrollTop: target.offset().top
+      }, 750)
+    }
+  }
+});
