@@ -461,3 +461,19 @@ button:hover {
         justify-content: center;
     }
 }
+@media(min-width: 1800px) {
+    .container {
+        max-width: 1800px;
+        margin: 0 auto;
+    }
+    nav,
+    .goDown{
+        max-width: 1800px;
+    }
+    nav {
+        position: relative;
+    }
+    .welcome-img {
+        right: auto;
+    }
+}
