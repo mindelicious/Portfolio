@@ -21,9 +21,12 @@ nav {
 .logo{
     display:flex;
     align-self: center;
+}
+.logo a {
     font: 20px bold, "Montserrat", sans-serif;
     color: #333333;
     letter-spacing: 0.15em;
+    text-decoration: none;
 }
 ul {
     width: 100%;
